@@ -1,0 +1,188 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Website</title>
+    <style>
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Perpetua', serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            header a {
+                color: #fff;
+                text-decoration: none;
+                margin: 0 10px;
+            }
+
+        /* User icon styles */
+        .user-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+            .user-icon:hover::after {
+                content: "Log in";
+                position: absolute;
+                right: 0;
+                top: 100%;
+                background-color: #333;
+                color: #fff;
+                padding: 5px 10px;
+                border-radius: 5px;
+                font-size: 14px;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            .user-icon:hover::before {
+                content: "";
+                position: absolute;
+                right: 12px;
+                top: 100%;
+                border: 8px solid transparent;
+                border-top-color: #333;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            .user-icon:hover::after,
+            .user-icon:hover::before {
+                opacity: 1;
+            }
+
+        /* Carousel styles */
+        .carousel {
+            height: 90vh; /* Reduced height to accommodate header */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .carousel img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+            }
+
+                .carousel img.active {
+                    opacity: 1;
+                }
+
+
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+            z-index: 10;
+        }
+
+            .overlay-text h1 {
+                font-size: 5rem;
+                font-family: 'Rochester', cursive;
+                text-shadow: 2px 2px 2px black;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: black;
+                color: white;
+            }
+
+            .overlay-text p {
+                font-size: 2.5rem;
+                font-family: 'Perpetua', serif;
+                font-style: italic;
+                font-weight: bold;
+                color: white;
+                text-shadow: 2px 2px 2px black;
+            }
+
+        /* Gradient button styles */
+        .gradient-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background: linear-gradient(90deg, #ff6f61, #ffda49);
+            border: none;
+            text-decoration: none;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            .gradient-btn:hover {
+                background: linear-gradient(90deg, #ffda49, #ff6f61);
+            }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="tropical.html">Tropical places 🏝️</a>
+            <a href="beach.html">Beaches 🌊</a>
+            <a href="mountain.html">Mountains🏔️</a>
+            <a href="contact.html">Contact Us 📞</a>
+        </nav>
+        <a href="login.html"> 🙍‍♂️</a>
+    </header>
+
+    <div class="carousel">
+        <!-- These will be the images in the carousel -->
+        <img src="pexels-earano-1352196.jpg" class="active" alt="Image 1">
+        <img src="pexels-fabianwiktor-994605.jpg" alt="Image 2">
+        <img src="pexels-nejc-kosir-108379-338936.jpg" alt="Image 3">
+        <img src="pexels-pixabay-210243.jpg" alt="Image 4">
+        <div class="overlay-text">
+            <h1>Welcome to Voyage Vista</h1>
+            <p>Experience the beauty of nature with us</p>
+            <a href="aboutus.html" class="gradient-btn">About Us</a>
+        </div>
+    </div>
+
+    <!-- JavaScript for Carousel Functionality -->
+    <script>
+    const carouselImages = document.querySelectorAll('.carousel img');
+    let currentImageIndex = 0;
+    let nextImageIndex = () => (currentImageIndex + 1) % carouselImages.length;
+
+    setInterval(() => {
+        carouselImages[currentImageIndex].classList.remove('active');
+        currentImageIndex = nextImageIndex();
+        carouselImages[currentImageIndex].classList.add('active');
+    }, 3000); // Changes the image every 3 seconds
+    </script>
+</body>
+</html>
