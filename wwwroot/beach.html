@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Majestic Heights & Mountain Escapes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .slider {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .slick-slide {
+            width: 100vw;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        table {
+            margin-top: 50px;
+            border-collapse: collapse;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: linear-gradient(to right, #ff6f61, #ffda49);
+            color: white;
+            font-weight: bold;
+        }
+
+        td {
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div style="background-image: url('https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+        <div style="background-image: url('https://images.pexels.com/photos/50594/sea-bay-waterfront-beach-50594.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+        <div style="background-image: url('https://images.pexels.com/photos/457878/pexels-photo-457878.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+        <div style="background-image: url('https://images.pexels.com/photos/632522/pexels-photo-632522.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+    </div>
+
+
+
+    <h1 style="text-align:center;color:black;font-size:30px;margin-top:50px;">Beauty of Beaches: Destinations</h1>
+    <table>
+        <tr>
+            <th>Destination</th>
+            <th>Itinerary</th>
+            <th>Cost</th>
+        </tr>
+  
+        <tr>
+            <td>Hawaii</td>
+            <td>Beach hopping, volcano exploration, snorkeling</td>
+            <td>$3000</td>
+        </tr>
+        <tr>
+            <td>Maldives</td>
+            <td>Water villas, scuba diving, sunset cruises</td>
+            <td>$4000</td>
+        </tr>
+        <tr>
+            <td>Phuket, Thailand</td>
+            <td>Island hopping, elephant sanctuaries, Thai cuisine</td>
+            <td>$2500</td>
+        </tr>
+        <tr>
+            <td>Cancun, Mexico</td>
+            <td>Mayan ruins, snorkeling in cenotes, nightlife</td>
+            <td>$1800</td>
+        </tr>
+        <tr>
+            <td>The Bahamas</td>
+            <td>Pink sand beaches, swimming with pigs, water sports</td>
+            <td>$3500</td>
+        </tr>
+        <tr>
+            <td>Seychelles</td>
+            <td>Private islands, giant tortoises, snorkeling</td>
+            <td>$5000</td>
+        </tr>
+        <tr>
+            <td>Gold Coast, Australia</td>
+            <td>Surfing, theme parks, beachfront dining</td>
+            <td>$2200</td>
+        </tr>
+        <tr>
+            <td>Barbados</td>
+            <td>Cultural tours, rum distilleries, sea turtle encounters</td>
+            <td>$3200</td>
+        </tr>
+
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            if (typeof $().slick !== "function") {
+                console.error("Slick carousel script not loaded.");
+                return;
+            }
+
+            $('.slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2500, // Change image every 2.5 seconds
+                dots: false,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                cssEase: 'linear'
+            });
+        });
+    </script>
+</body>
+</html>

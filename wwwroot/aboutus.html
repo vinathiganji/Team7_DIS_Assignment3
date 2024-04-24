@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        /* CSS styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://npr.brightspotcdn.com/b6/ec/7f565533442da77a7693ec3d1b4b/usf2-cl-111419.JPG');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            height: 100vh; /* Set body height to full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 600px; /* Limit container width for better readability */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50px;
+            overflow: hidden;
+            display: flex; /* Added */
+            flex-wrap: wrap; /* Added */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+
+        .left-content {
+            width: 100%;
+            margin-bottom: 10px; /* Increased margin-bottom */
+            text-align: center;
+        }
+
+            .left-content p {
+                margin: 0;
+            }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .column {
+            flex-basis: calc(25% - 20px); /* Adjust to 25% to ensure equal width for 4 columns */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+            .column img {
+                width: 100%;
+                height: 200px; /* Set fixed height */
+                object-fit: cover; /* Ensure the image covers the container */
+                border-radius: 5px;
+            }
+
+            .column p {
+                margin-top: 10px;
+                text-align: center;
+            }
+
+        .github-link {
+            text-align: center;
+            margin-top: -20px; /* Adjusted margin-top */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-content">
+            <p>ABOUT PROJECT: Voyage Vista offers immersive journeys, tailored to awaken your wanderlust. Explore curated destinations, from bustling cities to serene landscapes. Our expertly crafted itineraries ensure unforgettable experiences. Discover the world with ease, convenience, and a touch of adventure. Your dream vacation begins with Voyage Vista</p>
+        </div>
+        <div class="row">
+            <div class="column">
+                <p>Team Member 1</p>
+                <img src="/WhatsApp Image 2024-03-13 at 8.00.01 PM.jpeg" alt="Person 1">
+                <p>Vinathi Ganji<br>Worked on creating index page, tropical, beach, mountains, about us, and contact us pages</p>
+            </div>
+            <div class="column">
+                <p>Team Member 2</p>
+                <img src="/WhatsApp Image 2024-04-21 at 9.10.32 PM.jpeg" alt="Person 2">
+                <p>Koushik Reddy Gadipally<br> Worked on creating Login page </p>
+            </div>
+            <div class="column">
+                <p>Team Member 3</p>
+                <img src="/WhatsApp Image 2024-04-20 at 9.52.54 PM.jpeg" alt="Person 3">
+                <p>Neelesh Gamini<br> Worked on deploying the application to Azure cloud</p>
+            </div>
+            <div class="column">
+                <p>Team Member 4</p>
+                <img src="/WhatsApp Image 2024-04-21 at 8.02.37 PM.jpeg" alt="Person 4">
+                <p>Shreya Reddy Vade<br> Worked on hosting the application on cyberduck and implemented data model</p>
+            </div>
+        </div>
+        <div class="github-link">
+            <a href="https://github.com/your-username/your-repository">GitHub Link</a>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code (optional)
+        // You can add more functionality here if needed
+        console.log("About us page loaded.");
+    </script>
+</body>
+</html>
