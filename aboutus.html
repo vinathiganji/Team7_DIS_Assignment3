@@ -9,7 +9,7 @@
         body {
             margin: 0;
             padding: 0;
-            background-image: url('https://npr.brightspotcdn.com/b6/ec/7f565533442da77a7693ec3d1b4b/usf2-cl-111419.JPG');
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYkB_XoitsBkrlHaIWA-KIpugoAaBZumlmRhRu7HTUvw&s');
             background-size: cover;
             background-position: center;
             font-family: Arial, sans-serif;
@@ -55,7 +55,7 @@
 
         .column img {
             width: 100%;
-            height: 200px;
+            height: 200px; /* Fixed height for all images */
             object-fit: cover;
             border-radius: 5px;
         }
@@ -91,54 +91,65 @@
         .header {
             background-color: rgba(157, 168, 153, 0.8);
             color: white;
-            padding: 10px 20px;
+            padding: 20px 20px;
             display: flex;
             align-items: center;
             width: 100%;
+            justify-content: space-between; /* Adjust the space between the items */
         }
 
         .header a {
             color: white;
             text-decoration: none;
-            margin-right: 20px;
+            margin-right: 10px; /* Decreased margin-right */
+            font-size: 30px; /* Increase the font size */
         }
     </style>
 </head>
 <body>
     <header class="header">
         <nav>
-            <a href="/" style="font-size: 30px;">🏠</a>
+            <a href="/" style="font-size: 30px; align-items: -left;">🏠</a> <!-- Adjusted margin-right -->
         </nav>
     </header>
     <div class="container">
         <div class="left-content">
-            <p>ABOUT PROJECT: Voyage Vista offers immersive journeys, tailored to awaken your wanderlust. Explore curated destinations, from bustling cities to serene landscapes. Our expertly crafted itineraries ensure unforgettable experiences. Discover the world with ease, convenience, and a touch of adventure. Your dream vacation begins with us.</p>
+            <p>Our Team</p>
         </div>
         <div class="row">
             <div class="column">
-                <img src="/WhatsApp Image 2024-03-13 at 8.00.01 PM.jpeg" alt="Person 1">
-                <p>Vinathi Ganji<br>Worked on creating index page, tropical, beach, mountains, about us, and contact us pages</p>
+                <img src="vinathi.jpeg" alt="Person 1">
+                <p>Vinathi Ganji</p>
             </div>
             <div class="column">
-                <img src="/WhatsApp Image 2024-04-21 at 9.10.32 PM.jpeg" alt="Person 2">
-                <p>Koushik Reddy Gadipally<br>Worked on creating Login page and adding details</p>
+                <img src="koushik.jpeg" alt="Person 2">
+                <p>Koushik Reddy Gadipally</p>
             </div>
             <div class="column">
-                <img src="/WhatsApp Image 2024-04-20 at 9.52.54 PM.jpeg" alt="Person 3">
-                <p>Neelesh Gamini<br>Worked on deploying the application to Azure cloud</p>
+                <img src="neelesh.jpeg" alt="Person 3">
+                <p>Neelesh Gamini</p>
             </div>
             <div class="column">
-                <img src="/WhatsApp Image 2024-04-21 at 8.02.37 PM.jpeg" alt="Person 4">
-                <p>Shreya Reddy Vade<br>Worked on hosting the application on cyberduck and implemented data model</p>
+                <img src="shreya.jpeg" alt="Person 4">
+                <p>Shreya Reddy Vade</p>
             </div>
         </div>
         <div class="github-link">
             <a href="https://github.com/vinathiganji/Team7_DIS_Assignment3">GitHub Link</a>
         </div>
     </div>
+    <div style="max-width: 600px; padding: 20px; background-color: rgba(255, 255, 255, 0.8); border-radius: 50px; margin-top: 20px; overflow: hidden; color: black;">
+        <h2> Contributions:</h2>
+        <p>Vinathi:Designed and developed multiple web pages including the index, tropical, beach, mountains, about us, and contact us pages, demonstrating proficiency in front-end development, user interface design, and responsive web design principles.</p>
+        <p>Koushik:Led the development of an intuitive and secure Login page, implementing cutting-edge design principles and robust authentication . Crafted dynamic forms for effortlessly capturing and storing user details for data validation and integrity</p>
+        <p>Neelesh:Led the successful deployment of our application to the Azure cloud platform, optimizing performance, scalability, and reliability </p>
+        <p>Shreya:Led the successful deployment of the application using Cyberduck, showcasing expertise in hosting and implemented a data model.</p>
+    </div>
     <h2> Our Data Model</h2>
     <img src="ERD1.png" alt="ERD Diagram" class="full-width">
-    <img src="/additional_image_2.jpg" alt="Additional Image 2" class="full-width">
+    <h2> Commit history</h2>
+    <img src="pic1.png" alt="Additional Image 2" class="full-width">
+    <img src="pic2.png" alt="Additional Image 3" class="full-width">
     <script>
         console.log("About us page loaded.");
     </script>
