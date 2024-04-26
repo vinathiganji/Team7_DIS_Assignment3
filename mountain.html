@@ -11,7 +11,6 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            overflow: hidden;
         }
 
         .slider {
@@ -41,13 +40,13 @@
         }
 
         h1 {
-            font-size: 3em;
+            font-size: 1.5em;
             margin-bottom: 20px;
             font-weight: bold;
         }
 
         table {
-            margin-top: 50px;
+            margin-top: 120px;
             border-collapse: collapse;
             width: 80%;
             margin-left: auto;
@@ -72,9 +71,57 @@
         tr:nth-child(even) td {
             background-color: #f2f2f2;
         }
+
+        .gradient-btn {
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+            background: linear-gradient(90deg, #ff6f61, #ffda49);
+            border: none;
+            text-decoration: none;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .gradient-btn:hover {
+            background: linear-gradient(90deg, #ffda49, #ff6f61);
+        }
+
+        .header {
+            background-color: rgba(0, 0, 115, 0.5);
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .checkbox-container {
+            margin-top: 20px;
+        }
+
+        .checkbox-container input[type="checkbox"] {
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
+    <div class="header">
+        <a href="index.html">🏠</a>
+        <h1>Majestic Mountains: Destinations</h1>
+    </div>
     <div class="slider">
         <div style="background-image: url('https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
         <div style="background-image: url('https://images.pexels.com/photos/808465/pexels-photo-808465.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
@@ -82,77 +129,74 @@
         <div style="background-image: url('https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
     </div>
 
-
-
-    <h1 style="text-align:center;color:darkolivegreen;font-size:30px;margin-top:50px;">Majestic Heights & Mountain Escapes: Destinations</h1>
     <table>
         <tr>
+            <th>Select</th>
             <th>Destination</th>
+            <th>Popular activities</th>
+            <th>Ratings</th>  <!-- New column for Ratings -->
             <th>Itinerary</th>
-            <th>Cost</th>
         </tr>
         <tr>
+            <td class="checkbox-container"><input type="checkbox" id="destination1" name="destination"><label for="destination1"></label></td>
             <td>Rocky Mountains, USA</td>
             <td>Hiking, skiing, wildlife viewing</td>
-            <td>$2500</td>
+            <td>★★★★★</td>  <!-- Sample rating -->
+            <td><a href="mountainadd.html" class="gradient-btn">View</a></td>
         </tr>
         <tr>
+            <td class="checkbox-container"><input type="checkbox" id="destination2" name="destination"><label for="destination2"></label></td>
             <td>Swiss Alps</td>
             <td>Mountain climbing, cable car rides, cheese tasting</td>
-            <td>$3000</td>
-
+            <td>★★★★☆</td>  <!-- Sample rating -->
+            <td><a href="mountainadd.html" class="gradient-btn">View</a></td>
         </tr>
         <tr>
+            <td class="checkbox-container"><input type="checkbox" id="destination3" name="destination"><label for="destination3"></label></td>
             <td>Himalayas, Nepal</td>
             <td>Trekking, visiting monasteries, mountain flights</td>
-            <td>$3500</td>
+            <td>★★★★★</td>  <!-- Sample rating -->
+            <td><a href="mountainadd.html" class="gradient-btn">View</a></td>
         </tr>
         <tr>
+            <td class="checkbox-container"><input type="checkbox" id="destination4" name="destination"><label for="destination4"></label></td>
             <td>Andes Mountains, South America</td>
             <td>Trekking, exploring ancient ruins, llama trekking</td>
-            <td>$2800</td>
+            <td>★★★★☆</td>  <!-- Sample rating -->
+            <td><a href="mountainadd.html" class="gradient-btn">View</a></td>
         </tr>
         <tr>
-            <td>Canadian Rockies</td>
-            <td>Icefield tours, canoeing, wildlife safaris</td>
-            <td>$2700</td>
+            <td class="checkbox-container"><input type="checkbox" id="destination5" name="destination"><label for="destination5"></label></td>
+            <td>Alps of New Zealand</td>
+            <td>Paragliding, hiking</td>
+            <td>★★★★☆</td>
+            <td><a href="mountainadd.html" class="gradient-btn">View</a></td>
         </tr>
         <tr>
-            <td>Alaska Range, USA</td>
-            <td>Mountaineering, dog sledding, glacier tours</td>
-            <td>$3200</td>
+            <td class="checkbox-container"><input type="checkbox" id="destination6" name="destination"><label for="destination6"></label></td>
+            <td>Mount Fuji, Japan</td>
+            <td>Cherry blossoms viewing, climbing</td>
+            <td>★★★★★</td>
+            <td><a href="mountainadd.html" class="gradient-btn">View</a></td>
         </tr>
         <tr>
-            <td>Dolomites, Italy</td>
-            <td>Hiking, via ferrata climbing, scenic drives</td>
-            <td>$2800</td>
-        </tr>
-        <tr>
-            <td>Atlas Mountains, Morocco</td>
-            <td>Camel trekking, visiting Berber villages, hiking</td>
-            <td>$3000</td>
-        </tr>
-        <tr>
-            <td>Tatra Mountains, Poland & Slovakia</td>
-            <td>Hiking, skiing, exploring caves</td>
-            <td>$2500</td>
-        </tr>
-        <tr>
-            <td>Rila Mountains, Bulgaria</td>
-            <td>Hiking to Rila Monastery, mountain biking, hot springs</td>
-            <td>$2600</td>
+            <td class="checkbox-container"><input type="checkbox" id="destination7" name="destination"><label for="destination7"></label></td>
+            <td>Pyrenees, Spain</td>
+            <td>Skiing, nature walks</td>
+            <td>★★★☆☆</td>
+            <td><a href="mountainadd.html" class="gradient-btn">View</a></td>
         </tr>
     </table>
+    <div style="width:80%; margin: 20px auto; background-color: white; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+       <h2> Ratings for Destinations</h2> <canvas id="ratingsChart"></canvas>
+    </div>
+    
+    
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
         $(document).ready(function () {
-            if (typeof $().slick !== "function") {
-                console.error("Slick carousel script not loaded.");
-                return;
-            }
-
             $('.slider').slick({
                 autoplay: true,
                 autoplaySpeed: 2500, // Change image every 2.5 seconds
@@ -167,5 +211,54 @@
             });
         });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var ctx = document.getElementById('ratingsChart').getContext('2d');
+            var ratingsChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Rocky Mountains, USA', 'Swiss Alps', 'Himalayas, Nepal', 'Andes Mountains, South America', 'Alps of New Zealand', 'Mount Fuji, Japan', 'Pyrenees, Spain'],
+                    datasets: [{
+                        label: 'Destination Ratings',
+                        data: [5, 4, 5, 4, 4, 5, 3],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
+                            'rgba(199, 199, 199, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)',
+                            'rgba(199, 199, 199, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    },
+                    plugins: {
+                        // Add this to create a white background for the chart
+                        background: {
+                            color: 'white'  // Set the background color
+                        }
+                    }
+                }
+            });
+        });
+        </script>
+        
 </body>
 </html>

@@ -13,10 +13,11 @@
             background-size: cover;
             background-position: center;
             font-family: Arial, sans-serif;
-            height: 100vh; /* Set body height to full viewport height */
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column; /* Set the flex direction to column to stack elements vertically */
+            color: white; /* Set text color to white */
         }
 
         .container {
@@ -24,22 +25,19 @@
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 50px;
+            margin-top: 20px; /* Add margin for spacing between sections */
             overflow: hidden;
-            display: flex; /* Added */
-            flex-wrap: wrap; /* Added */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            color: black;
         }
 
-        .left-content {
+        .left-content, .github-link {
             width: 100%;
-            margin-bottom: 10px; /* Increased margin-bottom */
             text-align: center;
         }
-
-            .left-content p {
-                margin: 0;
-            }
 
         .row {
             display: flex;
@@ -48,79 +46,100 @@
         }
 
         .column {
-            flex-basis: calc(25% - 20px); /* Adjust to 25% to ensure equal width for 4 columns */
+            flex-basis: calc(25% - 20px);
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-bottom: 20px;
+            color: black;
         }
 
-            .column img {
-                width: 100%;
-                height: 200px; /* Set fixed height */
-                object-fit: cover; /* Ensure the image covers the container */
-                border-radius: 5px;
-            }
+        .column img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
 
-            .column p {
-                margin-top: -10px;
-                text-align: center;
-            }
-
-        .github-link {
+        .column p {
+            margin-top: 10px;
             text-align: center;
-            margin-top: -10px; /* Adjusted margin-top */
+            color: black; /* Set text color to black */
+        }
+
+        /* Larger images displayed directly in the body */
+        img.full-width {
+            width: 80%; /* Increase the width of images */
+            max-width: 960px; /* Set a max width to control size on larger screens */
+            height: auto; /* Maintain aspect ratio */
+            margin: 20px 0; /* Add vertical spacing */
+            border-radius: 5px; /* Round corners */
+        }
+        h1 {
+            text-align: center;
+            padding: 20px;
+            margin: 20px auto; /* Centers the <h1> horizontally with margin */
+            width: 50%; /* Adjusts the width of the container */
+            background-color: rgba(128, 128, 128, 0.5); /* Grey background with 50% transparency */
+            border-radius: 10px; /* Rounded corners for the container */
+            color: black; /* Sets text color */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow for depth */
+        }
+        h2 {
+            color: black; /* Set text color to black */
+            background-color: rgba(128, 128, 128, 0.5); /* Grey background with 50% transparency */
+        }
+        .header {
+            background-color: rgba(157, 168, 153, 0.8);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
         }
     </style>
 </head>
 <body>
+    <header class="header">
+        <nav>
+            <a href="/" style="font-size: 30px;">🏠</a>
+        </nav>
+    </header>
     <div class="container">
         <div class="left-content">
-            <p>ABOUT PROJECT: Voyage Vista offers immersive journeys, tailored to awaken your wanderlust. Explore curated destinations, from bustling cities to serene landscapes. Our expertly crafted itineraries ensure unforgettable experiences. Discover the world with ease, convenience, and a touch of adventure. Your dream vacation begins with Voyage Vista</p>
+            <p>ABOUT PROJECT: Voyage Vista offers immersive journeys, tailored to awaken your wanderlust. Explore curated destinations, from bustling cities to serene landscapes. Our expertly crafted itineraries ensure unforgettable experiences. Discover the world with ease, convenience, and a touch of adventure. Your dream vacation begins with us.</p>
         </div>
         <div class="row">
             <div class="column">
-                <p>Team Member 1</p>
                 <img src="/WhatsApp Image 2024-03-13 at 8.00.01 PM.jpeg" alt="Person 1">
-                <br><br /> <p>
-                    Vinathi Ganji<br><br />
-                    Worked on creating index page, tropical, beach, mountains, about us, and contact us pages
-                </p>
+                <p>Vinathi Ganji<br>Worked on creating index page, tropical, beach, mountains, about us, and contact us pages</p>
             </div>
             <div class="column">
-                <p>Team Member 2</p>
                 <img src="/WhatsApp Image 2024-04-21 at 9.10.32 PM.jpeg" alt="Person 2">
-                <br><br />
-                <p>
-                    Koushik Reddy Gadipally<br> <br />
-                    Worked on creating Login page
-                </p>
+                <p>Koushik Reddy Gadipally<br>Worked on creating Login page and adding details</p>
             </div>
             <div class="column">
-                <p>Team Member 3</p>
                 <img src="/WhatsApp Image 2024-04-20 at 9.52.54 PM.jpeg" alt="Person 3">
-                <br><br /> <p>
-                    Neelesh Gamini<br><br />
-                    Worked on deploying the application to Azure cloud
-                </p>
+                <p>Neelesh Gamini<br>Worked on deploying the application to Azure cloud</p>
             </div>
             <div class="column">
-                <p>Team Member 4</p>
                 <img src="/WhatsApp Image 2024-04-21 at 8.02.37 PM.jpeg" alt="Person 4">
-                <br><br /> <p>
-                    Shreya Reddy Vade<br><br />
-                    Worked on hosting the application on cyberduck and implemented data model
-                </p>
+                <p>Shreya Reddy Vade<br>Worked on hosting the application on cyberduck and implemented data model</p>
             </div>
         </div>
         <div class="github-link">
             <a href="https://github.com/vinathiganji/Team7_DIS_Assignment3">GitHub Link</a>
         </div>
     </div>
-
+    <h2> Our Data Model</h2>
+    <img src="ERD1.png" alt="ERD Diagram" class="full-width">
+    <img src="/additional_image_2.jpg" alt="Additional Image 2" class="full-width">
     <script>
-        // JavaScript code (optional)
-        // You can add more functionality here if needed
         console.log("About us page loaded.");
     </script>
 </body>

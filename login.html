@@ -59,9 +59,32 @@
             color: red;
             margin-top: 5px;
         }
+
+        .header {
+            background-color: rgba(0, 0, 285, 0.5);
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+            .header a {
+                color: white;
+                text-decoration: none;
+                margin-right: 20px;
+            }
     </style>
 </head>
 <body>
+    <div class="header">
+        <a href="index.html">🏠</a>
+
+    </div>
     <div class="container">
         <h2>Login</h2>
         <div class="form-group">

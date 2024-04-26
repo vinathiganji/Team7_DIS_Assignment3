@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain Adventures Itineraries</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        header, footer { text-align: center; padding: 10px; background-color: #f3f3f3; }
+        h1 { color: #333; }
+        h2 { color: darkblue; }
+        section { margin-bottom: 20px; }
+        article { background-color: #f9f9f9; border: 1px solid #ddd; padding: 15px; border-radius: 8px; }
+        footer p { color: #666; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding-top: 50px; /* Adjust according to header height */
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: rgba(200, 162, 200, 0.8);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .add-button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .add-button {
+            background: linear-gradient(to right, #6b5b95, #7b68ee);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <header class="header">
+            <nav>
+                <a href="/">Home</a>
+                <a href="tropical.html">Tropical</a>
+                <a href="beach.html">Beaches</a>
+                <a href="mountain.html">Mountains</a>
+                <a href="aboutus.html">About Us</a>
+            </nav>
+        </header>
+    </header>
+    <main>
+        <section id="rocky">
+            <h2>Rocky Mountains, USA</h2>
+            <article>
+                <h3>Day 1: Denver, Colorado</h3>
+                <p>Arrive in Denver and drive to Rocky Mountain National Park. Visit Bear Lake.</p>
+                <h3>Day 2: Hiking and Wildlife Watching</h3>
+                <p>Early morning hike to Emerald Lake. Afternoon on Trail Ridge Road.</p>
+                <h3>Day 3: Adventure Sports</h3>
+                <p>White water rafting on the Colorado River. Evening at Estes Park.</p>
+            </article>
+        </section>
+
+        <section id="swiss">
+            <h2>Swiss Alps</h2>
+            <article>
+                <h3>Day 1: Interlaken</h3>
+                <p>Arrive in Interlaken, go paragliding over the lakes and mountains.</p>
+                <h3>Day 2: Jungfraujoch - Top of Europe</h3>
+                <p>Train ride to Jungfraujoch, explore the ice palace and Sphinx Observatory.</p>
+                <h3>Day 3: Zermatt and Matterhorn</h3>
+                <p>Travel to Zermatt, cable car ride to view the Matterhorn.</p>
+            </article>
+        </section>
+
+        <section id="himalayas">
+            <h2>Himalayas, Nepal</h2>
+            <article>
+                <h3>Day 1: Kathmandu</h3>
+                <p>Explore local temples and prepare for trekking.</p>
+                <h3>Days 2-4: Trekking to Everest Base Camp</h3>
+                <p>Trek to Everest Base Camp with stops at teahouses and monasteries.</p>
+                <h3>Day 5: Return to Kathmandu</h3>
+                <p>Return flight from Lukla and enjoy a traditional Nepalese meal.</p>
+            </article>
+        </section>
+
+        <section id="andes">
+            <h2>Andes Mountains, South America</h2>
+            <article>
+                <h3>Day 1: Cusco, Peru</h3>
+                <p>Explore Inca ruins and local markets in Cusco.</p>
+                <h3>Days 2-4: Inca Trail to Machu Picchu</h3>
+                <p>Hike the Inca Trail with guided tours of archaeological sites.</p>
+                <h3>Day 5: Machu Picchu and Return</h3>
+                <p>Watch sunrise over Machu Picchu and tour the site before returning to Cusco.</p>
+            </article>
+        </section>
+
+        <section id="alps-nz">
+            <h2>Alps of New Zealand</h2>
+            <article>
+                <h3>Day 1: Queenstown</h3>
+                <p>Arrive in Queenstown, enjoy the breathtaking scenery.</p>
+                <h3>Day 2: Milford Sound</h3>
+                <p>Scenic drive to Milford Sound, cruise on the fjord.</p>
+                <h3>Day 3: Mount Cook National Park</h3>
+                <p>Explore Mount Cook National Park, hike the Hooker Valley Track.</p>
+            </article>
+        </section>
+
+        <section id="fuji">
+            <h2>Mount Fuji, Japan</h2>
+            <article>
+                <h3>Day 1: Tokyo to Fuji</h3>
+                <p>Travel from Tokyo to the Fuji area, visit the Fuji Five Lakes.</p>
+                <h3>Day 2: Climbing Mount Fuji</h3>
+                <p>Begin the climb to Mount Fuji's summit before sunrise.</p>
+                <h3>Day 3: Return to Tokyo</h3>
+                <p>Descend Mount Fuji and return to Tokyo.</p>
+            </article>
+        </section>
+
+        <section id="pyrenees">
+            <h2>Pyrenees, France/Spain</h2>
+            <article>
+                <h3>Day 1: Pau, France</h3>
+                <p>Explore the historic city of Pau, visit the Château de Pau.</p>
+                <h3>Day 2: Pyrenees National Park</h3>
+                <p>Drive to Pyrenees National Park, hike to Gavarnie Cirque.</p>
+                <h3>Day 3: Lourdes</h3>
+                <p>Visit the Sanctuary of Our Lady of Lourdes, explore the town.</p>
+            </article>
+        </section>
+
+        <!-- Add button -->
+        <div class="add-button-container">
+            <button class="add-button" onclick="window.location.href='mform.html'">Add</button>
+        </div>
+    </main>
+
+</body>
+</html>

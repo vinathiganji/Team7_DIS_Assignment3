@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Majestic Heights & Mountain Escapes</title>
+    <title>Beauty of Beaches</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
     <style>
@@ -11,7 +11,6 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            overflow: hidden;
         }
 
         .slider {
@@ -41,13 +40,13 @@
         }
 
         h1 {
-            font-size: 3em;
+            font-size: 1.5em;
             margin-bottom: 20px;
             font-weight: bold;
         }
 
         table {
-            margin-top: 50px;
+            margin-top: 120px;
             border-collapse: collapse;
             width: 80%;
             margin-left: auto;
@@ -72,68 +71,118 @@
         tr:nth-child(even) td {
             background-color: #f2f2f2;
         }
+
+        .gradient-btn {
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+            background: linear-gradient(90deg, #ff6f61, #ffda49);
+            border: none;
+            text-decoration: none;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .gradient-btn:hover {
+            background: linear-gradient(90deg, #ffda49, #ff6f61);
+        }
+
+        .header {
+            background-color: rgba(0, 0, 285, 0.5);
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .checkbox-container {
+            margin-top: 20px;
+        }
+
+        .checkbox-container input[type="checkbox"] {
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
+    <div class="header">
+        <a href="index.html">🏠</a>
+        <h1>Beauty of Beaches: Destinations</h1>
+    </div>
     <div class="slider">
-        <div style="background-image: url('https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
-        <div style="background-image: url('https://images.pexels.com/photos/50594/sea-bay-waterfront-beach-50594.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
-        <div style="background-image: url('https://images.pexels.com/photos/457878/pexels-photo-457878.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
-        <div style="background-image: url('https://images.pexels.com/photos/632522/pexels-photo-632522.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+        <div style="background-image: url('https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+        <div style="background-image: url('https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+        <div style="background-image: url('https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+        <div style="background-image: url('https://images.pexels.com/photos/1835712/pexels-photo-1835712.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
     </div>
 
-
-
-    <h1 style="text-align:center;color:black;font-size:30px;margin-top:50px;">Beauty of Beaches: Destinations</h1>
     <table>
         <tr>
             <th>Destination</th>
+            <th>Popular activities</th>
+            <th>Ratings</th>
             <th>Itinerary</th>
-            <th>Cost</th>
-        </tr>
-
-        <tr>
-            <td>Hawaii</td>
-            <td>Beach hopping, volcano exploration, snorkeling</td>
-            <td>$3000</td>
         </tr>
         <tr>
-            <td>Maldives</td>
-            <td>Water villas, scuba diving, sunset cruises</td>
-            <td>$4000</td>
+            <td class="checkbox-container"><input type="checkbox" id="Bora Bora" name="destination" value="Bora Bora"><label for="Bora Bora">Bora Bora</label></td>
+            <td>Snorkeling, scuba diving,Sunset cruising</td>
+            <td>⭐⭐⭐⭐⭐</td>
+            <td><a href="beachadd.html" class="gradient-btn">View</a></td>
         </tr>
         <tr>
-            <td>Phuket, Thailand</td>
-            <td>Island hopping, elephant sanctuaries, Thai cuisine</td>
-            <td>$2500</td>
+            <td class="checkbox-container"><input type="checkbox" id="destination2" name="destination"><label for="destination2">Cancun</label></td>
+            <td>Snorkeling, Night life,Beach resorts</td>
+            <td>⭐⭐</td>
+            <td><a href="beachadd.html" class="gradient-btn">View</a></td>
         </tr>
         <tr>
-            <td>Cancun, Mexico</td>
-            <td>Mayan ruins, snorkeling in cenotes, nightlife</td>
-            <td>$1800</td>
+            <td class="checkbox-container"><input type="checkbox" id="destination3" name="destination"><label for="destination3">Phuket</label></td>
+            <td>Island hopping, scuba diving,Exploring local attractions</td>
+            <td>⭐⭐⭐</td>
+            <td><a href="beachadd.html" class="gradient-btn">View</a></td>
         </tr>
         <tr>
-            <td>The Bahamas</td>
-            <td>Pink sand beaches, swimming with pigs, water sports</td>
-            <td>$3500</td>
+            <td class="checkbox-container"><input type="checkbox" id="destination4" name="destination"><label for="destination4">Barbados</label></td>
+            <td>Surfing, swimming with sea turtles,Exploring caves</td>
+            <td>⭐⭐⭐⭐</td>
+            <td><a href="beachadd.html" class="gradient-btn">View</a></td>
         </tr>
         <tr>
-            <td>Seychelles</td>
-            <td>Private islands, giant tortoises, snorkeling</td>
-            <td>$5000</td>
+            <td class="checkbox-container"><input type="checkbox" id="destination5" name="destination"><label for="destination5">Malibu</label></td>
+            <td>Beach volleyball, surfing, sunbathing</td>
+            <td>⭐⭐⭐⭐</td>
+            <td><a href="beachadd.html" class="gradient-btn">View</a></td>
         </tr>
         <tr>
-            <td>Gold Coast, Australia</td>
-            <td>Surfing, theme parks, beachfront dining</td>
-            <td>$2200</td>
+            <td class="checkbox-container"><input type="checkbox" id="destination6" name="destination"><label for="destination6">Mykonos</label></td>
+            <td>Partying, water sports, cultural tours</td>
+            <td>⭐⭐⭐⭐⭐</td>
+            <td><a href="beachadd.html" class="gradient-btn">View</a></td>
         </tr>
         <tr>
-            <td>Barbados</td>
-            <td>Cultural tours, rum distilleries, sea turtle encounters</td>
-            <td>$3200</td>
+            <td class="checkbox-container"><input type="checkbox" id="destination7" name="destination"><label for="destination7">Tahiti</label></td>
+            <td>Snorkeling, cultural experiences, whale watching</td>
+            <td>⭐⭐⭐⭐</td>
+            <td><a href="beachadd.html" class="gradient-btn">View</a></td>
         </tr>
-
+        
     </table>
+    <div style="width:80%; margin: 20px auto; background-color: white; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+       <h2>Ratings for destinations</h2> <canvas id="ratingsChart"></canvas>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
@@ -157,6 +206,49 @@
                 cssEase: 'linear'
             });
         });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var ctx = document.getElementById('ratingsChart').getContext('2d');
+        var ratingsChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Bora Bora', 'Cancun', 'Phuket', 'Barbados', 'Malibu', 'Mykonos', 'Tahiti'],
+                datasets: [{
+                    label: 'Destination Ratings',
+                    data: [5, 2, 3, 4, 4, 5, 4],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(199, 199, 199, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(199, 199, 199, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        suggestedMax: 5
+                    }
+                }
+            }
+        });
+    });
     </script>
 </body>
 </html>
